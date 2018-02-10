@@ -1,0 +1,16 @@
+Thumbs.db
+
+test.py
+
+# tests
+test/*
+!test/mesh*
+
+# files
+*.pyc
+temp.*
+
+# PyCharm project settings
+.idea/
+venv*/ # environments
+venv/
