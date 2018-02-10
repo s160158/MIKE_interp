@@ -64,6 +64,9 @@ def interp_mesh(filename, filename_out, f):
 
         i += 1
 
+    fh.close()
+    fh_out.close()
+
 
 
 
