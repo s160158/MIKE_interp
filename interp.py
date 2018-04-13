@@ -2,8 +2,9 @@
 from __future__ import division
 
 from osgeo import gdal
-import numpy as np
 from scipy import interpolate
+
+import numpy as np
 
 def interp(dem):
     """
@@ -67,19 +68,6 @@ def interp_mesh(filename, filename_out, f):
     fh.close()
     fh_out.close()
 
-
-
-
-
 if __name__=='__main__':
-    #interp('./test/mesh.mesh', './test/mesh_interp.mesh', './test/mesh.tif')
-
-    f = interp('C:/Users/thsu/Desktop/thesis/cornerbox/extract/box722183_6185596/e/box_34672x28512_r004x004.tif')
-
-    #interp_mesh('C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_local/box_02816x02816_008x008_01_flat.mesh', 'C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_local/box_02816x02816_008x008_01_interp.mesh', f)
-
-    interp_mesh('C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_032x024_02_flat.mesh', 'C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_032x024_02.mesh', f)
-    interp_mesh('C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_064x052_02_flat.mesh', 'C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_064x052_02.mesh', f)
-    interp_mesh('C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_064x052_03_flat.mesh', 'C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_064x052_03.mesh', f)
-    interp_mesh('C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_132x108_03_flat.mesh', 'C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_132x108_03.mesh', f)
-    interp_mesh('C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_132x108_04_flat.mesh', 'C:/Users/thsu/Desktop/thesis/quad_meshes/mesh_regional/box_34672x28512_132x108_04.mesh', f)
+    f = interp('./test/mesh.tif')
+    interp_mesh('./test/mesh_f.mesh', './test/mesh_i.mesh', f)
